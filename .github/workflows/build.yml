@@ -7,6 +7,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: skycracker-mod
     steps:
       - uses: actions/checkout@v4
 
@@ -27,5 +30,5 @@ jobs:
         with:
           name: skycracker-mod
           path: |
-            build/libs/skycracker-*.jar
-            !build/libs/*-sources.jar
+            skycracker-mod/build/libs/skycracker-*.jar
+            !skycracker-mod/build/libs/*-sources.jar
